@@ -6683,10 +6683,3 @@ header .jumbotron small {
     text-align: left;
   }
 }
-body {
-  -webkit-transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
-  overflow: hidden;
-  background-color: #333;
-}
