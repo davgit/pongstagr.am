@@ -32,8 +32,6 @@ Pongstagr.am is a jQuery plugin that lets you display your Instagram media to yo
 
 Please refer to the **[project page](http://pongstr.github.io/pongstagr.am/)** for **[docs](http://pongstr.github.io/pongstagr.am/#docs)**, **[examples](http://pongstr.github.io/pongstagr.am/#)** and **[discussion](http://pongstr.github.io/pongstagr.am/#comments).**
 
------------
-
 **[Bootstrap](http://github.com/twbs/bootstrap/)** is created by [@mdo](http://twitter.com/mdo/) &amp; [@fat](http://twitter.com/fat) with all the <3 in the world, released under [Apache 2 License](https://github.com/twbs/bootstrap/blob/master/LICENSE).
 
 -----------

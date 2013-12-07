@@ -42,6 +42,7 @@
     , commenticon: "glyphicon glyphicon-comment"
     , picture_size: 42
     , show_counts:  true
+    , bs_modal:     true
   }
 
 
@@ -60,6 +61,7 @@
 
       return
     }
+
     , profile: function (options) {
         var _profile  = '<div class="media">'
             _profile += ' <div class="thumbnail pull-left">'
@@ -84,6 +86,7 @@
 
         return
       }
+
     , thumb: function (options) {
         var _thumbnail  = '<div class="'+ options.dflt.column +'">'
             _thumbnail += ' <div class="thumbnail text-center ' + options.dflt.effects + '">'
@@ -108,9 +111,10 @@
 
         $(options.target).append(_thumbnail)
 
-      return
-    }
-    , modal: function (options) {
+        return
+      }
+
+    , bsmodal: function (options) {
         var alert  = '<div class="alert">Your browser does not support HTML5 Videos or MPEG-4 format.</div>'
           , image  = '<div class="'+ options.dflt.preload +'" id="'+ options.data.id +'-full-loadr"></div>'
             image += '<img id="'+ options.data.id +'-full" src="'+ options.data.image +'" alt="'+ options.data.caption +'">'
@@ -206,8 +210,19 @@
             })
         })
 
-      return
-    }
+        return
+      }
+    
+    , cssmodal: function (options) {
+
+        $('#triggr-' + options.data.id).on('click', function(e) {
+          e.preventDefault()
+
+
+        })
+
+        return
+      }
   }
 
 
@@ -296,9 +311,11 @@
         Pongstgrm.prototype.preloadMedia({
             imgid : '#' + option.show + '-' + b.id + '-thmb'
           , loadr : '#' + option.show + '-' + b.id + '-thmb-loadr'
-        })
+        });
 
-        Pongstgrm.prototype.template.modal (defaults)
+        (defaults.dflt.bs_modal) ?
+          Pongstgrm.prototype.template.bsmodal(defaults) :
+          Pongstgrm.prototype.template.cssmodal (defaults)
 
       })
     }
